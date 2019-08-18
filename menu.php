@@ -16,23 +16,48 @@
     <div class="container p-10" style="margin-top: 100px">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Formulário de Cadastro</h5>
-                <p class="card-text">Aqui você irá encontrar um formulário de cadastro para inserir produtos ao seu sistema.</p>
+              <h5 class="card-title">Formulário de Cadastro</h5>
+              <p class="card-text">Aqui você irá encontrar um formulário de cadastro para inserir produtos ao seu sistema.</p>
+              <div class="d-flex justify-content-end">
+                <a href="cadastro.php" class="btn btn-primary d-flex justify-content-end">Cadastrar</a>
+              </div>
+            </div>
+        </div>
+
+        <div class="card mt-2">
+            <div class="card-body">
+              <h5 class="card-title">Seus Produtos</h5>
+              <p class="card-text">Aqui você encontrar uma tabela com seus produtos, podendo edita-los, deleta-los ou adicionar um novo.</p>
+              <div class="d-flex justify-content-end">
+                <a href="listaProdutos.php" class="btn btn-primary d-flex justify-content-end">Listar</a>
+              </div>
+            </div>
+        </div>
+
+        
+        <div class="card mt-2">
+            <div class="card-body">
+              <h5 class="card-title">Categoria</h5>
+              <p class="card-text">Opção para adicionar categoria de produtos</p>
+              <div class="d-flex justify-content-end">
+                <a href="adicionar_categoria.php" class="btn btn-primary d-flex justify-content-end mr-5">Cadastrar Categoria</a>
+                <a href="listaCategoria.php" class="btn btn-primary d-flex justify-content-end">Lista das Categorias</a>
+              </div>
+            </div>
+        </div>
+
+        <div class="card mt-2">
+            <div class="card-body">
+                <h5 class="card-title">Adicionar Fornecedor</h5>
+                <p class="card-text">Opção para adicionar fornecedores.</p>
                 <div class="d-flex justify-content-end">
-                  <a href="cadastro.php" class="btn btn-primary d-flex justify-content-end">Cadastrar</a>
+                  <a href="adicionar_fornecedor.php" class="btn btn-primary d-flex justify-content-end mr-5">Cadastrar Fornecedores</a>
+                  <a href="listaFornecedor.php" class="btn btn-primary d-flex justify-content-end">Lista dos Fornecedores</a>
                 </div>
             </div>
         </div>
 
-        <div class="card mt-5">
-            <div class="card-body">
-                <h5 class="card-title">Seus Produtos</h5>
-                <p class="card-text">Aqui você encontrar uma tabela com seus produtos, podendo edita-los, deleta-los ou adicionar um novo.</p>
-                <div class="d-flex justify-content-end">
-                  <a href="listaProdutos.php" class="btn btn-primary d-flex justify-content-end">Listar</a>
-                </div>
-            </div>
-        </div>
+    
     </div>
 
 

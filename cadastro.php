@@ -49,10 +49,22 @@
                     <label>Categoria</label>
                     <select class="form-group custom-select" required="true" name="categoria">
                         <option value="" disabled="disabled" selected>- Selecione -</option>
-                        <option value="hardware">Hardware</option>
-                        <option value="perifericos">Periféricos</option>
-                        <option value="software">Software</option>
-                        <option value="outros">Outros</option>
+                            <?php 
+                                include 'conexao.php';
+                                $sql = "select * from categoria order by categoria ASC";
+                                
+                                $buscar = mysqli_query($con,$sql);
+                                while ($array = mysqli_fetch_array($buscar)) {
+
+                                    $id_categoria = $array['id_categoria'];
+                                    $nome_categoria = $array['categoria'];
+                                
+                            ?>
+
+                        <option> <?php  echo $nome_categoria;?> </option>
+
+                        <?php } ?>
+
                     </select>
                 </div>
                 <div class="form-group col-5" >
@@ -60,8 +72,25 @@
                     <input name="quantidade" required="true" type="number" class="form-control" placeholder="Ex: 123">
                 </div>
                 <div class="form-group col-8" >
-                    <label>Fornecedor</label>
-                    <input name="fornecedor" type="text" class="form-control" placeholder="Ex: Fulanos Ltda.">
+                    <select class="form-group custom-select" required="true" name="fornecedor">
+                        <option value="" disabled="disabled" selected>- Selecione -</option>
+                        <?php 
+                                //include 'conexao.php';
+                                $sql = "select * from fornecedor order by fornecedor ASC";
+                                
+                                $busca = mysqli_query($con,$sql);
+                                while ($array = mysqli_fetch_array($busca)) {
+
+                                    $id_fornecedor = $array['id_fornecedor'];
+                                    echo $nome_fornecedor = $array['fornecedor'];
+                                    
+                                
+                            ?>
+
+                        <option> <?php  echo $nome_fornecedor;?> </option>
+
+                        <?php } ?>
+                    </select>
                 </div>
 
                 <div class="col-4" style="text-align:end; padding-top: 28px">
